@@ -34,7 +34,7 @@ const shadowHeader = () =>{
 }
 window.addEventListener('scroll', shadowHeader)
 
-/*=============== EMAIL JS ===============*/
+/*=============== Configuração do email ===============*/
 
 
 /*=============== SHOW SCROLL UP ===============*/ 
