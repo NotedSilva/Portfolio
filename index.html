@@ -34,19 +34,19 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#Home" class="nav__link">Home</a>
+                        <a href="#home" class="nav__link active-link">Home</a>
                     </li>
                     
                     <li class="nav__item">
-                        <a href="#Sobre" class="nav__link">Sobre Mim</a>
+                        <a href="#sobre" class="nav__link">Sobre Mim</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#Projetos" class="nav__link">Projetos</a>
+                        <a href="#projetos" class="nav__link">Projetos</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#Contato" class="nav__link">Contato</a>
+                        <a href="#contato" class="nav__link">Contato</a>
                     </li>
                 </ul>
 
@@ -424,6 +424,8 @@
                             </div>
                         </div>
 
+                        <p class="contact__message" id="contact-message"></p>
+
                         <button type="submit" class="contact__button button">
                             <i class="ri-send-plane-line"></i> Enviar Mensagem
                         </button>
@@ -465,17 +467,38 @@
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
-         
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+                <li>
+                    <a href="#sobre" class="footer__link">Sobre Mim</a>
+                </li>
+
+                <li>
+                    <a href="#servicos" class="footer__link">Serviços</a>
+                </li>
+
+                <li>
+                    <a href="#projetos" class="footer__link">Projetos</a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; Todos os direitos reservados por 
+                <a href="#">NotedSilva.</a>
+            </span>
+         </div>
       </footer>
 
-      <!--========== SCROLL UP ==========-->
-      
+      <!--========== Rolagem para cima ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+      </a>
 
       <!--=============== SCROLLREVEAL ===============-->
       <script src=""></script>
       
       <!--=============== EMAIL JS ===============-->
-      
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
