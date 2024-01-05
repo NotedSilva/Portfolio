@@ -68,6 +68,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: background-color .5s; /* transição para o dark mode */
 }
 
 h1, h2, h3, h4 {
@@ -90,18 +91,82 @@ img {
 }
 
 /*=============== Tema ===============*/
+.nav__buttons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
 
+.change-theme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s;
+}
 
 /*========== Variaveis do tema escuro ==========*/
-
+body.dark-theme{
+    --first-color: hsl(14, 80%, 50%);
+    --black-color: hsl(0, 0%, 18%);
+    --black-color-light: hsl(0, 0%, 30%);
+    --title-color: hsl(0, 0%, 95%);
+    --text-color: hsl(0, 0%, 70%);
+    --body-color: hsl(0, 0%, 8%);
+    --container-color: hsl(0, 0%, 12%);
+}
 
 /*========== 
-	Color changes in some parts of 
-	the website, in dark theme
+	Mudanças de cor em algumas partes
+    o site, em tema escuro
 ==========*/
+.dark-theme .shadow-header{
+    box-shadow: 0 1px 12px hsla(0, 0%, 0%, .6);
+}
 
+.dark-theme .section__title-1::after,
+.dark-theme .section__title-2::after{
+    background-color: hsla(14, 70%, 50%, .2);
+}
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+.dark-theme :is(.home__arrow, .home__line, .about__line){
+    filter: none;
+}
+
+.dark-theme .home__description b{
+    background: linear-gradient(90deg,
+                hsla(14, 80%, 50%, .3),
+                hsla(14, 80%, 50%, 0));
+}
+
+.dark-theme :is(.button__ghost, .services__icon i){
+    color: var(--white-color);
+}
+
+.dark-theme .projects__card:hover{
+    background-color: var(--body-color);
+}
+
+.dark-theme :is(.contact__mail, .contact__input, .contact__label){
+    background-color: var(--container-color);
+}
+
+.dark-theme .footer{
+    background-color: hsl(0, 0%, 4%);
+}
+
+.dark-theme::-webkit-scrollbar{
+    background-color: hsl(0, 0%, 20%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 30%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+/*=============== Classes CSS Reutilizáveis ===============*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -176,7 +241,7 @@ img {
     left: 0;
     background-color: var(--body-color);
     z-index: var(--z-fixed);
-    transition: box-shadow .4s;
+    transition: box-shadow .4s, background-color .4s;
 }
 
 .nav{
@@ -1047,10 +1112,226 @@ img {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/* Para dispositivos pequenos */
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+    .home__image{
+        width: 180px;
+    }
+    .geometric-box{
+        margin-top: 1rem;
+    }
+    .about__image{
+        width: 180px;
+    }
+    .about__shadow{
+        height: 270px;
+        right: -2.5rem;
+    }
+    .contact__data{
+        width: 100%;
+    }
+    .contact__data .section__title-2{
+        transform: translateX(0);
+    }
+}
 
+/* Para dispositivos médios */
+@media screen and (min-width: 576px){
+    .home__container,
+    .about__container,
+    .projects__container{
+        grid-template-columns: 350px;
+        justify-content: center;
+    }
+    .contact__data{
+        width: 350px;
+        padding: 4rem 1.5rem;
+        margin-inline: auto;
+    }
+    .contact__container{
+        grid-template-columns: 500px;
+        justify-content: center;
+    }
+    .contact__group{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+    .contact__social{
+        background-color: transparent;
+    }
+    .contact__social-arrow{
+        filter: invert(1);
+    }
+    .contact__social-description-1{
+        color: var(--text-color);
+    }
+    .contact__social-description-2{
+        color: var(--title-color);
+    }
+    .dark-theme .contact__social-arrow{
+        filter: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .services__container{
+        grid-template-columns: repeat(2, 250px);
+    }
+    .projects__container{
+        grid-template-columns: repeat(2, 350px);
+    }
+}
 
-/* For medium devices */
-
-
-/* For large devices */
+/* Para dispositivos grandes */
+@media screen and (min-width: 1150px) {
+    .container{
+        margin-inline: auto;
+    }
+    .section{
+        padding-block: 7rem 2rem;
+    }
+    .section__title-1::after,
+    .section__title-2::after{
+        width: 70px;
+        height: 48px;
+    }
+    .geometric-box{
+        transform: scale(1.2);
+    }
+    .nav{
+        height: calc(var(--header-height) + 2rem);
+        column-gap: 4rem;
+    }
+    .nav__close,
+    .nav__toggle,
+    .nav__title,
+    .nav__name{
+        display: none;
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+    .nav__menu{
+        margin-left: auto;
+    }
+    .nav__link{
+        color: var(--text-color);
+        font-size: var(--normal-font-size);
+    }
+    .nav__link:hover{
+        color: var(--title-color);
+    }
+    .nav__link::after{
+        background-color: var(--title-color)
+    }
+    .active-link{
+        color: var(--title-color);
+    }
+    .nav__link-button{
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 1.1rem 1.5rem;
+    }
+    .nav__link-button:hover{
+        color: var(--white-color);
+    }
+    .nav__link-button::after{
+        background-color: transparent;
+    }
+    .change-theme{
+        color: var(--text-color);
+    }
+    .change-theme:hover{
+        color: var(--title-color);
+    }
+    .home__container{
+        grid-template-columns: repeat(2, 460px);
+        gap: 2rem 4rem;
+        align-items: center;
+        padding-block: 11.5rem;  /* alterar */
+    }
+    .home__perfil{
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+    .home__image{
+        width: 350px;
+    }
+    .home__shadow{
+        right: -1.25rem;
+        bottom: -1.25rem;
+        border: 6px solid var(--black-color);
+    }
+    .home__name,
+    .home__description{
+        text-align: initial;
+    }
+    .home__name{
+        align-self: flex-end;
+        font-size: var(--biggest-font-size);
+    }
+    .home__info{
+        margin-top: 0;
+        align-self: flex-start;
+    }
+    .home__description{
+        position: relative;
+        font-size: var(--h2-font-size);
+        margin-bottom: 5.5rem;
+        padding-left: 3rem;
+    }
+    .home__description::after{
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: var(--title-color);
+        position: absolute;
+        left: 0;
+        top: 14px;
+    }
+    .home__scroll{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        column-gap: .75rem;
+    }
+    .home__scroll-text{
+        display: block;
+        color: var(--text-color);
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-medium);
+    }
+    .home__scroll-box{
+        width: 44px;
+        height: 44px;
+    }
+    .home__scroll-box i{
+        font-size: 1.25rem;
+    }
+    .home__perfil .geometric-box{
+        top: 15rem;
+    }
+    .home__arrow{
+        top: 1.5rem;
+        left: -5rem;
+        rotate: 80deg;
+        width: 50px;
+    }
+    .home__line{
+        left: -15rem;
+        bottom: 0rem;
+        width: 80px;
+        rotate: 30deg;
+    }
+    .home__social{
+        left: initial;
+        right: -6rem;
+    }
+    .home__social-link{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
