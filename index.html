@@ -34,19 +34,19 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Home</a>
+                        <a href="#home" class="nav__link active-link" id="nav__link1">Home</a>
                     </li>
                     
                     <li class="nav__item">
-                        <a href="#sobre" class="nav__link">Sobre Mim</a>
+                        <a href="#sobre" class="nav__link" id="nav__link2">Sobre Mim</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#projetos" class="nav__link">Projetos</a>
+                        <a href="#projetos" class="nav__link" id="nav__link3">Projetos</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contato" class="nav__link nav__link-button">Contato</a>
+                        <a href="#contato" class="nav__link nav__link-button" id="nav__link4">Contato</a>
                     </li>
                 </ul>
 
@@ -66,6 +66,12 @@
                     <i class="ri-menu-4-line"></i>
                 </div>
             </div>
+
+            <select id="languageSelector">
+                <option value="pt-br">Português (BR)</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
         </nav>
       </header>
 
@@ -105,10 +111,9 @@
                 </div>
 
                 <div class="home__info">
-                    <p class="home__description">
-                        <b>Frontend Developer</b>, with knowledge in web 
-                        development and design, I offer the best 
-                        projects resulting in quality work.
+                    <p class="home__description" id="home__description">
+                        <b>Full Stack</b>, com conhecimento em desenvolvimento web e design,
+                         ofereço os melhores projetos resultando em trabalhos de qualidade.
                     </p>
 
                     <a href="#sobre" class="home__scroll">
@@ -116,7 +121,7 @@
                             <i class="ri-arrow-down-s-line"></i>
                         </div>
 
-                        <span class="home__scroll-text">Rolar para baixo</span>
+                        <span class="home__scroll-text" id="home__scrolltext">Rolar para baixo</span>
                     </a>
                 </div>
 
@@ -127,7 +132,7 @@
          <!--==================== SOBRE MIM ====================-->
          <section class="about section" id="sobre">
             <div class="about__container container grid">
-                <h2 class="section__title-1">
+                <h2 class="section__title-1" id="section__titleabout">
                     <span>Sobre Mim.</span>
                 </h2>
 
@@ -144,23 +149,22 @@
                 </div>
 
                 <div class="about__info">
-                    <p class="about__description">
-                        Passionate about creating <b>Web Pages</b> with 
-                        <b>UI/UX User Interface</b>, I have years of 
-                        experience and many clients are happy with 
-                        the projects carried out.
+                    <p class="about__description" id="about__description">
+                        Apaixonado por criar <b>Páginas Web</b> com 
+                        <b>UI/UX Interface de usuário</b>, tenho anos
+                        de experiência e muitos clientes ficam satisfeitos com os projetos realizados.
                     </p>
 
-                    <ul class="about__list">
+                    <ul class="about__list" id="about__list">
                         <li class="about__item">
-                            <b>My Skills Are:</b> HTML, CSS, JavaScript, 
-                            React, Git & GitHub, Bootstrap, Flutter & 
+                            <b>Minhas habilidades são:</b> HTML, CSS, JavaScript, 
+                            React, Git e GitHub, Bootstrap, Flutter e
                             Figma.
                         </li>
                     </ul>
 
                     <div class="about__buttons">
-                        <a href="#contato" class="button">
+                        <a href="#contato" class="button" id="button__contato">
                             <i class="ri-send-plane-line"></i> Contate-me
                         </a>
 
@@ -174,7 +178,7 @@
 
          <!--==================== SERVICOS ====================-->
          <section class="services section">
-            <h2 class="section__title-2">
+            <h2 class="section__title-2" id="section__titleservico">
                 <span>Serviços.</span>
             </h2>
 
@@ -188,12 +192,11 @@
                             <i class="ri-layout-4-line"></i>
                         </div>
 
-                        <h2 class="services__title">Web Design</h2>
+                        <h2 class="services__title" id="services__title1">Designer Web</h2>
 
-                        <p class="services__description">
-                            Beautiful and elegant designs with 
-                            interfaces that are intuitive, efficient 
-                            and pleasant  to use for the user.
+                        <p class="services__description" id="services__description1">
+                            Designs bonitos e elegantes com interfaces intuitivas,
+                            eficientes e agradáveis ​​de usar para o usuário.
                         </p>
                     </div>
                 </article>
@@ -207,12 +210,11 @@
                             <i class="ri-code-box-line"></i>
                         </div>
 
-                        <h2 class="services__title">Development</h2>
+                        <h2 class="services__title" id="services__title2">Desenvolvimento</h2>
 
-                        <p class="services__description">
-                            Custom web development tailored to your 
-                            specifications, designed to provide a 
-                            flawless user experience.
+                        <p class="services__description" id="services__description2">
+                            Desenvolvimento web personalizado, adaptado às suas especificações,
+                            projetado para fornecer uma experiência de usuário impecável.
                         </p>
                     </div>
                 </article>
@@ -226,12 +228,11 @@
                             <i class="ri-smartphone-line"></i>
                         </div>
 
-                        <h2 class="services__title">Mobile App</h2>
+                        <h2 class="services__title" id="services__title3">Aplicativo Móvel</h2>
 
-                        <p class="services__description">
-                            Design and transform website projects 
-                            into mobile apps to provide a seamless
-                            user experience.
+                        <p class="services__description" id="services__description3">
+                            Projete e transforme projetos de sites em aplicativos
+                            móveis para fornecer uma experiência de usuário perfeita.
                         </p>
                     </div>
                 </article>
@@ -240,7 +241,7 @@
 
          <!--==================== PROJETOS ====================-->
          <section class="projects section" id="projetos">
-            <h2 class="section__title-1">
+            <h2 class="section__title-1" id="section__titleprojeto">
                 <span>Projetos.</span>
             </h2>
 
@@ -255,13 +256,12 @@
                     </div>
 
                     <div class="projects__content">
-                        <h3 class="projects__subtitle">Website</h3>
-                        <h2 class="projects__title">Site de Carros</h2>
+                        <h3 class="projects__subtitle" id="projects__subtitle1">Website</h3>
+                        <h2 class="projects__title" id="projects__title1">Site de Carros</h2>
 
-                        <p class="projects__description">
-                            Project that you carry out in the design 
-                            and structure of the layout, showing the 
-                            design at the client's request.
+                        <p class="projects__description" id="projects__description1">
+                            Projeto que você realiza na concepção e estrutura do layout,
+                            apresentando o desenho a pedido do cliente.
                         </p>
                     </div>
 

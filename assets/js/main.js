@@ -151,3 +151,47 @@ function confirmDownload() {
         return false;
     }
 }
+
+/*=============== ALTERAÇÃO DE IDIOMA ===============*/
+document.addEventListener('DOMContentLoaded', function(){
+    const languageSelector = document.getElementById('languageSelector');
+
+    languageSelector.addEventListener('change', function(){
+        const selectedLanguage = languageSelector.value;
+        changeLanguage(selectedLanguage);
+    });
+
+    // função para alterar o idioma
+    function changeLanguage(language){
+        switch(language){
+            case 'en':
+                nav__link1.textContent = 'Home';
+                nav__link2.textContent = 'About Me';
+                nav__link3.textContent = 'Projects';
+                nav__link4.textContent = 'Contact';
+
+                home__description.innerHTML = '<b>Full Stack</b>, with knowledge in web development and design, I offer the best projects resulting in quality work.';
+                home__scrolltext.textContent = 'Scroll Down';
+
+                section__titleabout.textContent = 'About Me.';
+                about__description.innerHTML = 'Passionate about creating <b>Web Pages</b> with <b>UI/UX User Interface</b>, I have years of experience and many clients are happy with the projects carried out.';
+                about__list.innerHTML = '<b>My Skills Are:</b> HTML, CSS, JavaScript, React, Git & GitHub, Bootstrap, Flutter & Figma.';
+                button__contato.textContent = 'Contact Me';
+
+                section__titleservico.textContent = 'Services.';
+                services__title1.textContent = 'Web Design';
+                services__description1.textContent = 'Beautiful and elegant designs with interfaces that are intuitive, efficient and pleasant  to use for the user.';
+                services__title2.textContent = 'Development';
+                services__description2.textContent = 'Custom web development tailored to your specifications, designed to provide a flawless user experience.';
+                services__title3.textContent = 'Mobile App';
+                services__description3.textContent = 'Design and transform website projects into mobile apps to provide a seamlessuser experience.';
+
+                section__titleprojeto.textContent = 'Projects.';
+                projects__subtitle1.textContent = 'Website';
+                projects__title1.textContent = 'App';
+                projects__description1.textContent = 'Project that you carry out in the design and structure of the layout, showing the design at the clients request.';
+                projects__link1.textContent = 'View';
+                break
+        }
+    }
+});
