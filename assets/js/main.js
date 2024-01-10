@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 section__titleabout.textContent = 'About Me.';
                 about__description.innerHTML = 'Passionate about creating <b>Web Pages</b> with <b>UI/UX User Interface</b>, I have years of experience and many clients are happy with the projects carried out.';
                 about__list.innerHTML = '<b>My Skills Are:</b> HTML, CSS, JavaScript, React, Git & GitHub, Bootstrap, Flutter & Figma.';
-                button__contato.textContent = 'Contact Me';
+                button__contato.innerHTML = '<i class="ri-send-plane-line"></i> Contact Me';
 
                 section__titleservico.textContent = 'Services.';
                 services__title1.textContent = 'Web Design';
@@ -189,8 +189,103 @@ document.addEventListener('DOMContentLoaded', function(){
                 section__titleprojeto.textContent = 'Projects.';
                 projects__subtitle1.textContent = 'Website';
                 projects__title1.textContent = 'App';
-                projects__description1.textContent = 'Project that you carry out in the design and structure of the layout, showing the design at the clients request.';
-                projects__link1.textContent = 'View';
+                projects__description1.textContent = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link1.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link2.innerHTML = ' <i class="ri-dribbble-line"></i> View';
+                projects__subtitle2.textContent = 'App';
+                projects__title2.textContent = 'Quiz App';
+                projects__description2.textContent = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link3.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link4.innerHTML = ' <i class="ri-dribbble-line"></i> View';
+                projects__subtitle3.textContent = 'Website';
+                projects__title3.textContent = 'Manicure Site';
+                projects__description3.textContent = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link5.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link6.innerHTML = '<i class="ri-dribbble-line"></i> View';
+                projects__subtitle4.textContent = 'App';
+                projects__title4.textContent = 'IMC App';
+                projects__description4.innerHTML = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link7.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link8.innerHTML = '<i class="ri-dribbble-line"></i> View';
+
+                section__titlecontato.textContent = 'Contact Me.';
+                contact__descriptioncontato.textContent = "I will read all emails. Send me any message you want and I'll get back to you.";
+                contact__descriptioncontato2.innerHTML = "I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your reply.";
+                contact__title.textContent = 'Send Me A Message';
+                contact__label1.innerHTML = '<input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name"><label for="name" class="contact__label">First Name</label>';
+                contact__label2.innerHTML = '<input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address"><label for="email" class="contact__label">Email Address</label>';
+                contact__label3.innerHTML = '<input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject"><label for="subject" class="contact__label">Subject</label>';
+                contact__label4.innerHTML = '<textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea><label for="message" class="contact__label">Message</label>';
+                contact__button2.innerHTML = '<i class="ri-send-plane-line"></i> Send Message';
+                contact__social1.textContent = 'Or';
+                contact__social2.textContent = 'Write me on my social networks';
+
+                footer__link1.textContent = 'About';
+                footer__link2.textContent = 'Services';
+                footer__link3.textContent = 'Projects';
+                footer__copy.innerHTML = '&#169; All Rights Reserved By <a href="https://github.com/NotedSilva" target="_blank">NotedSilva.</a>';
+                break
+
+                case 'es':
+                    nav__link1.textContent = 'Home';
+                nav__link2.textContent = 'About Me';
+                nav__link3.textContent = 'Projects';
+                nav__link4.textContent = 'Contact';
+
+                home__description.innerHTML = '<b>Full Stack</b>, with knowledge in web development and design, I offer the best projects resulting in quality work.';
+                home__scrolltext.textContent = 'Scroll Down';
+
+                section__titleabout.textContent = 'About Me.';
+                about__description.innerHTML = 'Passionate about creating <b>Web Pages</b> with <b>UI/UX User Interface</b>, I have years of experience and many clients are happy with the projects carried out.';
+                about__list.innerHTML = '<b>My Skills Are:</b> HTML, CSS, JavaScript, React, Git & GitHub, Bootstrap, Flutter & Figma.';
+                button__contato.innerHTML = '<i class="ri-send-plane-line"></i> Contact Me';
+
+                section__titleservico.textContent = 'Services.';
+                services__title1.textContent = 'Web Design';
+                services__description1.textContent = 'Beautiful and elegant designs with interfaces that are intuitive, efficient and pleasant  to use for the user.';
+                services__title2.textContent = 'Development';
+                services__description2.textContent = 'Custom web development tailored to your specifications, designed to provide a flawless user experience.';
+                services__title3.textContent = 'Mobile App';
+                services__description3.textContent = 'Design and transform website projects into mobile apps to provide a seamlessuser experience.';
+
+                section__titleprojeto.textContent = 'Projects.';
+                projects__subtitle1.textContent = 'Website';
+                projects__title1.textContent = 'App';
+                projects__description1.textContent = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link1.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link2.innerHTML = ' <i class="ri-dribbble-line"></i> View';
+                projects__subtitle2.textContent = 'App';
+                projects__title2.textContent = 'Quiz App';
+                projects__description2.textContent = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link3.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link4.innerHTML = ' <i class="ri-dribbble-line"></i> View';
+                projects__subtitle3.textContent = 'Website';
+                projects__title3.textContent = 'Manicure Site';
+                projects__description3.textContent = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link5.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link6.innerHTML = '<i class="ri-dribbble-line"></i> View';
+                projects__subtitle4.textContent = 'App';
+                projects__title4.textContent = 'IMC App';
+                projects__description4.innerHTML = "Project that you carry out in the design and structure of the layout, showing the design at the client's request.";
+                projects__link7.innerHTML = '<i class="ri-github-line"></i>  View';
+                projects__link8.innerHTML = '<i class="ri-dribbble-line"></i> View';
+
+                section__titlecontato.textContent = 'Contact Me.';
+                contact__descriptioncontato.textContent = "I will read all emails. Send me any message you want and I'll get back to you.";
+                contact__descriptioncontato2.innerHTML = "I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your reply.";
+                contact__title.textContent = 'Send Me A Message';
+                contact__label1.innerHTML = '<input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name"><label for="name" class="contact__label">First Name</label>';
+                contact__label2.innerHTML = '<input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address"><label for="email" class="contact__label">Email Address</label>';
+                contact__label3.innerHTML = '<input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject"><label for="subject" class="contact__label">Subject</label>';
+                contact__label4.innerHTML = '<textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea><label for="message" class="contact__label">Message</label>';
+                contact__button2.innerHTML = '<i class="ri-send-plane-line"></i> Send Message';
+                contact__social1.textContent = 'Or';
+                contact__social2.textContent = 'Write me on my social networks';
+
+                footer__link1.textContent = 'About';
+                footer__link2.textContent = 'Services';
+                footer__link3.textContent = 'Projects';
+                footer__copy.innerHTML = '&#169; All Rights Reserved By <a href="https://github.com/NotedSilva" target="_blank">NotedSilva.</a>';
                 break
         }
     }
