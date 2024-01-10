@@ -1116,6 +1116,22 @@ body.dark-theme{
     bottom: 3rem;
 }
 
+/*=============== Mudança de Linguagem ===============*/
+.languageSelector{
+    padding: 5px;
+    border: 1px solid var(--body-color);
+    background-color: var(--white-color); font-size: var(--font-regular);
+    font-family: 'Bai Jamjuree';
+    cursor: pointer;
+}
+.languageSelector option:focus{
+    background-color: var(--black-color-light);
+    cursor: pointer;
+}
+.languageSelector option:checked{
+    background-color: var(--black-color); color: var(--white-color);
+} 
+
 /*=============== BREAKPOINTS ===============*/
 /* Para dispositivos pequenos */
 @media screen and (max-width: 340px){
